@@ -1,3 +1,19 @@
+English
+
+
+README.md
+
+As the economy develops and the flow of people increases, identification and authentication of ID cards are becoming more frequent. This technology has played a significant role in facilitating people's lives and improving the quality of consumer experience. In the network environment such as large-scale public platforms, third-party payment platforms, and second-hand car trading platforms, user registration is an indispensable link, and at the same time, there are huge user groups for information input. OCR recognition technology based on mobile terminals has also played an important role in handling licenses and various other registration matters, solving the inefficiency of manually entering information in the process of user real-name registration.
+
+Use process: 1. To obtain the ID card picture, you can choose the picture that has been stored in the computer, or you can open the camera to shoot on site. It should be noted here that when taking pictures, try to keep the ID facing the camera. 2. Click the recognition button, one-key recognition. The identification result is the original ID code, including birthplace, birthday, age, gender, and checksum (to check whether the ID number is legal).
+
+The environment used in this project is as follows: 1. A computer with Win10 system installed, and the integrated development environment VS2017, computer vision library Opencv3.4.5 and Microsoft basic class library MFC are used. Different versions of the environment need to be adjusted accordingly, including the SDK version, platform toolset and additional dependencies. The version that comes with your computer shall prevail. 2. Equipped with a high-definition camera. If the resolution of the camera is too low, the recognition rate of the collected ID card will drop to a certain extent. 3. There are 5 ID card test samples in the IDCard folder, which are for learning purposes only. If there is any infringement, please contact to delete it. 4. The ann folder contains the trained neural network-multilayer perceptron, and Number_char.rar contains the training sample of the ID number, including the numbers 0-9, and the Roman numeral X, which can be trained by yourself. 5. cities.txt contains the first 6 digits of the country's provinces, cities and counties and their corresponding ID cards, which are used to match the place of birth.
+
+The following is an introduction to the resource files: 1.headers.h contains most of the header files needed by the project, as well as the declaration of custom functions and the definition of classes. 2.training.cpp realizes the function of building and training a neural network, which includes calculating the gray image features and histogram features of the extracted samples. 3. The whole process of identification.cpp identification, including image preprocessing, ID number area positioning and digital character cutting, as well as character feature extraction. 4.identifyIdCardDlg.cpp realizes the process of extracting personal information, as well as the design of the visual interface, including buttons such as turning on the camera and taking pictures and their corresponding event processing functions.
+
+Finally, I wish you 0error and 0warning!
+
+
 随着经济发展和人流量增多，身份证的识别认证日趋频繁。这项技术在便捷人们的生活和提高消费者的体验质量上发挥了不小的作用。在大型公众平台、第三方支付平台、二手车交易平台等网络环境下，用户注册是必不可少的环节，同时又有庞大的用户群体来进行信息输入。在办理执照和其他各种登记的事务中，基于移动终端的OCR识别技术也发挥了重要的作用，解决了用户实名注册过程中手动录入信息的低效问题。
 
 使用流程：
